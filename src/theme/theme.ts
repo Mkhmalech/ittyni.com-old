@@ -1,4 +1,5 @@
-import { IThemeInterface, createGlobalStyle, device } from ".";
+import { IThemeInterface } from ".";
+import ittyni from "../ittyni";
 
 export const theme : IThemeInterface= {
     color :{
@@ -14,15 +15,3 @@ export const theme : IThemeInterface= {
     },
     windowHeight : window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
 };
-
-export const GlobalStyle = createGlobalStyle`
-  *, body, root { 
-    margin: 0; 
-    padding: 0; 
-    background : ${({theme})=>theme.color.primaryColor};
-  }
-
-  h2,h3 {
-    font-size : .9em;
-  }
-`

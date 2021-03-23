@@ -1,10 +1,16 @@
-import { Home } from "./website/home";
+import { Home } from "./theme/layout/home";
 
 export const routes = {
-    admin : {
-        path : '/admin/:user/',
+    home : {
+        path : '/*',
+        component : Home       
     },
-    website : {
-        path : '/website/*'       
+    book : {
+        path : '/annuaire',
+        component : ""       
+    },
+    procedure : {
+        path : '/actes',
+        component : ""       
     }
 }

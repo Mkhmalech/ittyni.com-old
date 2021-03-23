@@ -1,16 +1,10 @@
 import * as React from 'react';
-import * as Wrapper from './wrappers'
-import { GlobalStyle } from '../theme';
-import Header from './header'
-import { Link, Route, Redirect } from 'react-router-dom';
-import styled from '../theme/styled-components';
-import {HomeLink, LoginLink, LoginLinkIcon, LoginLinkText} from '../ui-ittyni/src/links/Links'
+import * as Wrapper from '../../ui-ittyni/src/wrapper/wrappers'
+import Header from './header/header'
+import styled from '../styled-components';
 
-
-import { routes } from '../routes';
-import { connect } from 'react-redux';
-import { IttyniState } from '../store/index';
-import Helmet from 'react-helmet';
+import ittyni from '../../ittyni';
+import { Search } from './search/search';
 
 interface IHomeProps {}
 
@@ -20,46 +14,30 @@ export const Home: React.FunctionComponent<IHomeProps> = () => {
   });
   return (
     <>
-      <GlobalStyle />
+      <ittyni.ui.Globals.GlobalStyle/>
+      <ittyni.ui.Wrapper.Page>
+        <ittyni.ui.Wrapper.Header >
+          <Header/>
+        </ittyni.ui.Wrapper.Header>
+        
+        <ittyni.ui.Wrapper.Main>
+          
+          <ittyni.ui.Wrapper.MainContent>
 
-      <Wrapper.Page>
-        <Wrapper.Header >
-          <Header>
+            <Search />
 
-            <HomeLink to="/website/analyses-medicales/Listes-prix-analyses-medicales/maroc"> Tests Medicale </HomeLink>
+          </ittyni.ui.Wrapper.MainContent>
 
-            <LoginLink to={`/website/laboratoires-d-analyses-mediales/`}>
-              <LoginLinkIcon>
-                {/* <LoginIcon /> */}
-              </LoginLinkIcon>
-              <LoginLinkText>Laboratoires</LoginLinkText>
-            </LoginLink>
-            <LoginLink to={`/website/auth/login`}>
-              <LoginLinkIcon>
-                {/* <LoginIcon /> */}
-              </LoginLinkIcon>
-              <LoginLinkText>Connecter</LoginLinkText>
-            </LoginLink>
+          <ittyni.ui.Wrapper.MainSide>
+            Side bar
+          </ittyni.ui.Wrapper.MainSide>
 
-          </Header>
-        </Wrapper.Header>
-        <Wrapper.Main>
+        </ittyni.ui.Wrapper.Main>       
 
-          <Wrapper.MainContent>
-
-             Here Goes Extension modules
-
-          </Wrapper.MainContent>
-          <Wrapper.MainSide>
-  
-          </Wrapper.MainSide>
-
-        </Wrapper.Main>       
-
-        <Wrapper.Footer>
+        <ittyni.ui.Wrapper.Footer>
           All Copyrights reserved for iTTyni(c) v1.0.0Beta
-        </Wrapper.Footer>
-      </Wrapper.Page>
+        </ittyni.ui.Wrapper.Footer>
+      </ittyni.ui.Wrapper.Page>
     </>
   );
 };

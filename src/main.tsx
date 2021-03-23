@@ -11,9 +11,10 @@ import { History } from "history";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./theme";
 
-import HomeLayout from './website/index'
+
 import { routes } from './routes';
-import { Home } from "./website/home";
+
+import ittyni  from "./ittyni";
 
 
 
@@ -23,6 +24,8 @@ interface MainProps {
 }
 
 const Main: React.FC<MainProps> = ({ store, history }) => {
+
+    const {Article} = ittyni.ui;
     
     return (
         <ThemeProvider theme={theme}>
@@ -30,8 +33,7 @@ const Main: React.FC<MainProps> = ({ store, history }) => {
                 <Provider store={store}>
                     <Router history={history}>
                         <Switch>
-                            <Route path={routes.website.path} component={Home} />
-                            <Redirect from='/*' to={routes.website.path} />
+                            <Route path={routes.home.path} component={routes.home.component} />
                         </Switch>
                     </Router>
                 </Provider>

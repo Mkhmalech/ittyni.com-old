@@ -24,6 +24,6 @@ export const LoginLinkIcon = styled('div')`
   margin-bottom: 20px;
 `
 export const TestLink = styled(Link)`
-text-decoration : none;
-color : inhert;
+  text-decoration : none;
+  color : inhert;
 `

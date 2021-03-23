@@ -1,5 +1,5 @@
-import styled from '../theme/styled-components';
-import { device } from '../theme';
+import styled from '../../../theme/styled-components';
+import { device } from '../../../theme';
 
 /**
  * main page wrapper
@@ -7,23 +7,18 @@ import { device } from '../theme';
 export const Page = styled('div').attrs({className : "pageWrapper"})`    
     height : 100%;
     display : flex;
-    flex-direction : column;
+    flex-direction : column;    
+    background : ${({theme})=>theme.color.primaryColor};
 `
 /**
  * header wrapper
  */
 export const Header = styled('header').attrs({className : "headerWrapper"})`
-    position: fixed;
-    height: 73px;
     width: 100%;
     z-index: 11;
-    border-bottom: 1px solid #d4d4d4;
-    display: flex;
-    * {
-        background-color: ${({theme})=>theme.color.defaultColor};
-    }
+    display: block;
+    background: #ffffff;    
 `
-
 /**
  * Container wrapper
  */
@@ -32,7 +27,6 @@ export const Main = styled('main').attrs({className : "containerWrapper"})`
     display : flex;
     flex-direction : row;
     margin : 0 50px;
-    padding-top : 150px;
 
     ${device.desktop`
         margin : 0 50px;
