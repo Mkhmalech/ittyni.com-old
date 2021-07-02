@@ -20,7 +20,7 @@ export const Home: React.FunctionComponent<IHomeProps> = () => {
           <Header/>
         </ittyni.ui.Wrapper.Header>
         
-        <ittyni.ui.Wrapper.Main>
+        {/* <ittyni.ui.Wrapper.Main>
           
           <ittyni.ui.Wrapper.MainContent>
 
@@ -36,7 +36,7 @@ export const Home: React.FunctionComponent<IHomeProps> = () => {
 
         <ittyni.ui.Wrapper.Footer>
           All Copyrights reserved for iTTyni(c) v1.0.0Beta
-        </ittyni.ui.Wrapper.Footer>
+        </ittyni.ui.Wrapper.Footer> */}
       </ittyni.ui.Wrapper.Page>
     </>
   );

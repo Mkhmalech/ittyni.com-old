@@ -25,7 +25,6 @@ interface Ittyni {
     Wrapper : {
       Page : React.JSXElementConstructor
       Header : React.JSXElementConstructor
-      Header : React.JSXElementConstructor
       Main : React.JSXElementConstructor
       MainContent : React.JSXElementConstructor
       MainSide : React.JSXElementConstructor
