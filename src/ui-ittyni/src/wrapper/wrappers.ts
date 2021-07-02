@@ -7,8 +7,8 @@ import { device } from '../../../theme';
 export const Page = styled('div').attrs({className : "pageWrapper"})`    
     height : 100%;
     display : flex;
-    flex-direction : column;    
-    background : ${({theme})=>theme.color.primaryColor};
+    flex-direction : row;    
+    background : ${({theme})=>theme.color.defaultColor};
 `
 /**
  * header wrapper
@@ -16,8 +16,9 @@ export const Page = styled('div').attrs({className : "pageWrapper"})`
 export const Header = styled('header').attrs({className : "headerWrapper"})`
     width: 100%;
     z-index: 11;
-    display: block;
-    background: #ffffff;    
+    display : flex;
+    flex-direction : row;  
+    background: #0770e3;   
 `
 /**
  * Container wrapper
